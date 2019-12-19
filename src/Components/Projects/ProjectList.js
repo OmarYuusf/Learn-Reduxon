@@ -1,0 +1,17 @@
+import React from 'react';
+import ProjectSummery from "./ProjectSummery"
+
+const ProjectList = () => {
+    return (
+        <div className="projetc-list section">
+            <ProjectSummery />
+            <ProjectSummery />
+            <ProjectSummery />
+            <ProjectSummery />
+            <ProjectSummery />
+            <ProjectSummery />
+        </div>
+    );
+};
+
+export default ProjectList;
