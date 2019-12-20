@@ -9,14 +9,20 @@ const initState = {
 const ProjectReducer = (state = initState, action) => {
     switch(action.type){
         case "CREATE_PROJECT":
-            return{
-                ...state,
-                projects: state.projects.concat({ id: Math.random(), 
-                                                  title: action.projectData.title, 
-                                                  content: action.projectData.content})
-            }
+            // return{
+            //     ...state,
+            //     projects: state.projects.concat({ id: Math.random(), 
+            //                                       title: action.projectData.title, 
+            //                                       content: action.projectData.content})
+            // }
+            console.log("created project", action.projectData)
+            return state;
+        case "CREATE_PROJECT_ERORR":
+            console.log("Erorr >> : ", action.err)
+            return state
+        default :
+            return state;
     }
-    return state
 }
 
 export default ProjectReducer
